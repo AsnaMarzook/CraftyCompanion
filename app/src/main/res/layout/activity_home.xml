@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".HomeActivity"
+    android:paddingTop="10dp">
+
+    <View
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/getLocation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/edit_text"
+        android:foregroundGravity="center" />
+
+    <ImageButton
+        android:layout_marginRight="2dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_notifications_24"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"/>
+
+    <ImageButton
+        android:layout_marginLeft="2dp"
+        android:id="@+id/getLocation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:src="@drawable/baseline_my_location_24"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="42dp"
+        android:text="Current Location" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="center"
+        android:layout_below="@+id/address"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"/>
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/viewPager"
+        android:background="@drawable/edit_text"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/search"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/brown"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        android:textColorHighlight="@color/light_tea"
+        android:text="Categories" />
+
+    <TextView
+        android:id="@+id/view_all"
+        android:layout_alignEnd="@id/categories"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/tea"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="15dp"
+        android:text="View All"
+        tools:ignore="TouchTargetSizeCheck"/>
+
+    <RelativeLayout
+        android:id="@+id/list1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/view_all"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/litro_gas"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:src="@drawable/litrogas" />
+
+        <ImageButton
+            android:id="@+id/laugfs_gas"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/litro_gas"
+            android:background="@color/white"
+            android:src="@drawable/laugfsgas" />
+
+        <ImageButton
+            android:id="@+id/empty_gas"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/laugfs_gas"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/emptygas" />
+
+        <ImageButton
+            android:id="@+id/access_gas"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/empty_gas"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/accessgas" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/top_selling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/list1"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/brown"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        android:textColorHighlight="@color/light_tea"
+        android:text="Top Selling" />
+
+    <TextView
+        android:id="@+id/view_all2"
+        android:layout_alignEnd="@id/top_selling"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list1"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/tea"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="15dp"
+        android:text="View All"
+        tools:ignore="TouchTargetSizeCheck"/>
+
+
+</RelativeLayout>
+
