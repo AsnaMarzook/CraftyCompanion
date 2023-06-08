@@ -8,6 +8,7 @@
     android:animateLayoutChanges="true"
     android:orientation="vertical"
     tools:context=".HomeActivity"
+    android:background="#faefeb"
     android:paddingTop="10dp">
 
     <View
@@ -26,7 +27,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_notifications_24"
-        android:background="@color/white"
+        android:background="#faefeb"
         android:layout_alignParentRight="true"/>
 
     <ImageButton
@@ -34,7 +35,7 @@
         android:id="@+id/getLocation"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@color/white"
+        android:background="#faefeb"
         android:src="@drawable/baseline_my_location_24"/>
 
     <TextView
@@ -49,7 +50,7 @@
         android:textSize="13sp"
         android:gravity="center"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="42dp"
         android:text="Current Location" />
 
@@ -77,7 +78,7 @@
         android:layout_marginBottom="5dp" />
 
     <TextView
-        android:id="@+id/categories"
+        android:id="@+id/top_selling"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -87,11 +88,11 @@
         android:textSize="18sp"
         android:layout_marginLeft="15dp"
         android:textColorHighlight="@color/light_tea"
-        android:text="Categories" />
+        android:text="Top Selling Crafts" />
 
     <TextView
         android:id="@+id/view_all"
-        android:layout_alignEnd="@id/categories"
+        android:layout_alignEnd="@id/top_selling"
         android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,43 +118,43 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/litro_gas"
+            android:id="@+id/hanging_light"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@color/white"
-            android:src="@drawable/litrogas" />
+            android:background="#faefeb"
+            android:src="@drawable/hanging_light" />
 
         <ImageButton
-            android:id="@+id/laugfs_gas"
+            android:id="@+id/card"
             android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@+id/litro_gas"
-            android:background="@color/white"
-            android:src="@drawable/laugfsgas" />
+            android:layout_toRightOf="@+id/hanging_light"
+            android:background="#faefeb"
+            android:src="@drawable/card" />
 
         <ImageButton
-            android:id="@+id/empty_gas"
+            android:id="@+id/bag"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_toRightOf="@+id/laugfs_gas"
-            android:background="@color/white"
+            android:layout_toRightOf="@+id/card"
+            android:background="#faefeb"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/emptygas" />
+            android:src="@drawable/bag" />
 
         <ImageButton
-            android:id="@+id/access_gas"
+            android:id="@+id/necklace"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_toRightOf="@+id/empty_gas"
-            android:background="@color/white"
+            android:layout_height="120dp"
+            android:layout_toRightOf="@+id/bag"
+            android:background="#faefeb"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/accessgas" />
+            android:src="@drawable/necklace" />
 
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/top_selling"
+        android:id="@+id/categories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -163,24 +164,76 @@
         android:textSize="18sp"
         android:layout_marginLeft="15dp"
         android:textColorHighlight="@color/light_tea"
-        android:text="Top Selling" />
+        android:text="Categories" />
 
-    <TextView
-        android:id="@+id/view_all2"
-        android:layout_alignEnd="@id/top_selling"
-        android:layout_alignParentEnd="true"
+    <RelativeLayout
+        android:id="@+id/list2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/list1"
-        android:fontFamily="@font/aclonica"
-        android:textColor="@color/tea"
-        android:textSize="14sp"
-        android:clickable="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="15dp"
-        android:text="View All"
-        tools:ignore="TouchTargetSizeCheck"/>
+        android:layout_gravity="center"
+        android:layout_below="@+id/categories"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/textiles"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:src="@drawable/textiles" />
+
+        <ImageButton
+            android:id="@+id/jewels"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/textiles"
+            android:background="#faefeb"
+            android:src="@drawable/jewels" />
+
+        <ImageButton
+            android:id="@+id/gifts"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/jewels"
+            android:background="#faefeb"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/gifts" />
+
+        <ImageButton
+            android:id="@+id/glass_art"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_toRightOf="@+id/gifts"
+            android:background="#faefeb"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/glass_art" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="312dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/categories"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_menu" />
 
 
 </RelativeLayout>
+
+
+
 

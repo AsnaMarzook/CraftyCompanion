@@ -6,6 +6,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="#faefeb"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -104,18 +105,18 @@
                 android:layout_width="80dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:background="@color/white"
                 android:src="@drawable/google_icon"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:background="#faefeb"/>
             <ImageButton
                 android:id="@+id/facebook_Button"
                 android:layout_width="80dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_toRightOf="@+id/google_Button"
-                android:background="@color/white"
                 android:src="@drawable/facebook_icon"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:background="#faefeb" />
         </RelativeLayout>
 
         <TextView
